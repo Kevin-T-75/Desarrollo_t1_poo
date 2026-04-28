@@ -33,11 +33,18 @@ public class Desarrolo_poo {
         System.out.print("Apellidos: ");
         p.setApellidos(sc.nextLine());
         
-        System.out.print("Edad: ");
-        p.setEdad(sc.nextInt());
-        sc.nextLine();
+        do {
+            try {
+              System.out.print("Edad: ");
+              p.setEdad(sc.nextInt());
+              sc.nextLine(); 
+              break;
+            } catch (Exception e) {
+              System.out.println("Error: ingrese solo números");
+              sc.nextLine(); 
+            }
+        } while (true);
 
-        // Documento (tipo + número en un solo do while)
         do {
             System.out.print("Tipo de documento (DNI / CE): ");
             p.setT_doc(sc.nextLine());
@@ -72,17 +79,15 @@ public class Desarrolo_poo {
 
         System.out.print("Correo: ");
         p.setCorreo(sc.nextLine());
-
-        // 👉 Guardar paciente
         list.add(p);
-
         System.out.print("¿Agregar otro paciente? (s/n): ");
         opcion = sc.nextLine();
 
     } while (opcion.equals("s"));
-        
-        
-        
+    
+    
+    
+    
     }
     
 }
