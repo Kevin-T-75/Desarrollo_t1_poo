@@ -49,15 +49,31 @@ public class Paciente {
     }
 
     public void setT_doc(String T_doc) {
+        if (T_doc.equals("DNI") || T_doc.equals("CE")) {
         this.T_doc = T_doc;
+    } else {
+        this.T_doc = null;
+        System.out.println("Tipo de documento inválido");
+    }
     }
 
     public String getN_doc() {
         return N_doc;
     }
 
-    public void setN_doc(String N_doc) {
-        this.N_doc = N_doc;
+    public void setN_doc(String doc) {
+      if (this.T_doc != null) {
+        if (this.T_doc.equals("DNI") && doc.length() == 8) {
+            this.N_doc = doc;
+        } 
+        else if (this.T_doc.equals("CE") && doc.length() == 9) {
+            this.N_doc = doc;
+        } 
+        else {
+            this.N_doc = null;
+            System.out.println("Número inválido para el tipo de documento");
+        }   
+    }
     }
 
     public String getT_sangre() {

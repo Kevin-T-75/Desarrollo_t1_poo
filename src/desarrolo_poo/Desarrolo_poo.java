@@ -29,13 +29,22 @@ public class Desarrolo_poo {
 
         System.out.print("Edad: ");
         p.setEdad(sc.nextInt());
-        sc.nextLine(); // limpiar buffer
+        sc.nextLine(); 
 
-        System.out.print("Tipo de documento: ");
-        p.setT_doc(sc.nextLine());
+       do {
+           System.out.print("Tipo de documento (DNI / CE): ");
+           p.setT_doc(sc.nextLine());
 
-        System.out.print("Número de documento: ");
-        p.setN_doc(sc.nextLine());
+           if (p.getT_doc() != null) {
+
+              System.out.print("Número de documento: ");
+              p.setN_doc(sc.nextLine());
+
+              if (p.getN_doc() == null) {
+                  System.out.println("Número inválido para el tipo");
+                }
+            }
+        } while (p.getT_doc() == null || p.getN_doc() == null);
 
         System.out.print("Tipo de sangre: ");
         p.setT_sangre(sc.nextLine());
