@@ -71,7 +71,7 @@ public class Paciente {
         } 
         else {
             this.N_doc = null;
-            System.out.println("Número inválido para el tipo de documento");
+            System.out.println("Numero invalido para el tipo de documento");
         }   
     }
     }
@@ -101,7 +101,7 @@ public class Paciente {
         this.N_telefono = N_telefono;
     } else {
         this.N_telefono = null;
-        System.out.println("Teléfono inválido (debe tener 9 dígitos)");
+        System.out.println("Telefono invalido (debe tener 9 digitos)");
     }
     }
 
@@ -113,6 +113,16 @@ public class Paciente {
         this.correo = correo;
     }
     
+    @Override
+    public String toString() {
+        return "Nombre: " + Nombre + " " + Apellidos + " " +
+           "Edad: " + edad + " " +
+           "Documento: " + T_doc + " - " + N_doc + " " +
+           "Tipo de sangre: " + T_sangre + " " +
+           "Alergias: " + Alergias + " " +
+           "Telefono: " + N_telefono + " " +
+           "Correo: " + correo + "@gmail.com";
+    }
     
     
 }
