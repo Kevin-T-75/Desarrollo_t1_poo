@@ -4,6 +4,8 @@
  */
 package desarrolo_poo;
 
+import java.util.Scanner;
+
 
 /**
  *
@@ -17,8 +19,35 @@ public class Desarrolo_poo {
     public static void main(String[] args) {
         // TODO code application logic here
         Paciente p = new Paciente();
+        Scanner sc = new Scanner(System.in);
         
-        
+        System.out.print("Nombres: ");
+        p.setNombre(sc.nextLine());
+
+        System.out.print("Apellidos: ");
+        p.setApellidos(sc.nextLine());
+
+        System.out.print("Edad: ");
+        p.setEdad(sc.nextInt());
+        sc.nextLine(); // limpiar buffer
+
+        System.out.print("Tipo de documento: ");
+        p.setT_doc(sc.nextLine());
+
+        System.out.print("Número de documento: ");
+        p.setN_doc(sc.nextLine());
+
+        System.out.print("Tipo de sangre: ");
+        p.setT_sangre(sc.nextLine());
+
+        System.out.print("Alergias: ");
+        p.setAlergias(sc.nextLine());
+
+        System.out.print("Teléfono: ");
+        p.setN_telefono(sc.nextLine());
+
+        System.out.print("Correo: ");
+        p.setCorreo(sc.nextLine());
         
         
         
