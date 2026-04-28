@@ -4,6 +4,7 @@
  */
 package desarrolo_poo;
 
+
 /**
  *
  * @author UCC20418
@@ -15,7 +16,13 @@ public class Desarrolo_poo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("holaaaaa");
+        Paciente p = new Paciente();
+        
+        
+        
+        
+        
+        
     }
     
 }
