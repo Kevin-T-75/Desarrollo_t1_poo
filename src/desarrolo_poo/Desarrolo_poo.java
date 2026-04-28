@@ -52,9 +52,12 @@ public class Desarrolo_poo {
         System.out.print("Alergias: ");
         p.setAlergias(sc.nextLine());
 
-        System.out.print("Teléfono: ");
-        p.setN_telefono(sc.nextLine());
-
+        do {    
+            System.out.print("Número de teléfono: ");
+            p.setN_telefono(sc.nextLine());
+            
+        }while (p.getN_telefono() == null);
+        
         System.out.print("Correo: ");
         p.setCorreo(sc.nextLine());
         

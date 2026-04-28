@@ -97,7 +97,12 @@ public class Paciente {
     }
 
     public void setN_telefono(String N_telefono) {
+        if (N_telefono.length() == 9) {
         this.N_telefono = N_telefono;
+    } else {
+        this.N_telefono = null;
+        System.out.println("Teléfono inválido (debe tener 9 dígitos)");
+    }
     }
 
     public String getCorreo() {
